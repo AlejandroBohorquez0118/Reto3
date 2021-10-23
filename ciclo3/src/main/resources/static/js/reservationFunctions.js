@@ -100,7 +100,7 @@ function cargar(idItem){
 
 function consultar(){
     $.ajax({
-        url:"http://localhost:8080/api/Reservation/all",
+        url:"http://129.151.116.109:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -166,7 +166,7 @@ function guardar(){
         contentType:"application/json; charset=utf-8",
         dataType: 'JSON',
         data: JSON.stringify(var2),
-        url:"http://localhost:8080/api/Reservation/save",
+        url:"http://129.151.116.109:8080/api/Reservation/save",
         success:function(respose) {
             console.log("Se guardó correctamente");
             //alert("Se guardó correctametne..");
@@ -207,7 +207,7 @@ function consultarDatos(){
 
  function consultarDoctor(){
     $.ajax({
-        url:"http://localhost:8080/api/Doctor/all",
+        url:"http://129.151.116.109:8080/api/Doctor/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -238,7 +238,7 @@ function consultarDatos(){
 
 function consultarCliente(){
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://129.151.116.109:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -270,7 +270,7 @@ function consultarCliente(){
 
      function Calificar(idItem){
         $.ajax({    
-            url : "http://localhost:8080/api/Reservation/"+idItem,
+            url : "http://129.151.116.109:8080/api/Reservation/"+idItem,
             type : 'GET',
             dataType : 'JSON',        
     
@@ -308,7 +308,7 @@ function consultarCliente(){
             contentType:"application/json; charset=utf-8",
             dataType: 'JSON',
             data: JSON.stringify(var2),
-            url:"http://localhost:8080/api/Score/save",
+            url:"http://129.151.116.109:8080/api/Score/save",
             success:function(respose) {
                 console.log("Se guardó correctamente");
                 var scoreInput = document.getElementById('score');

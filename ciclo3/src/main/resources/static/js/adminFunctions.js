@@ -18,7 +18,7 @@ function editar(){
        
         data: dataToSend,
         
-        url: 'http://localhost:8080/api/Admin/update',
+        url: 'http://129.151.116.109:8080/api/Admin/update',
         
         type: 'PUT',
         contentType:'application/json',
@@ -53,7 +53,7 @@ function eliminar(idElemento){
         data : dataToSend,
         
        
-        url : "http://localhost:8080/api/Admin/"+idElemento,
+        url : "http://129.151.116.109:8080/api/Admin/"+idElemento,
         type: 'DELETE',
         contentType:'application/json',
         success : function(json, textStatus, xhr) {
@@ -73,7 +73,7 @@ function eliminar(idElemento){
 
 function cargar(idItem){
     $.ajax({    
-        url : "http://localhost:8080/api/Admin/"+idItem,
+        url : "http://129.151.116.109:8080/api/Admin/"+idItem,
         type : 'GET',
         dataType : 'JSON',        
 
@@ -99,7 +99,7 @@ function cargar(idItem){
 
 function consultar(){
     $.ajax({
-        url:"http://localhost:8080/api/Admin/all",
+        url:"http://129.151.116.109:8080/api/Admin/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -135,7 +135,7 @@ function guardar(){
         contentType:"application/json; charset=utf-8",
         dataType: 'JSON',
         data: JSON.stringify(var2),
-        url:"http://localhost:8080/api/Admin/save",
+        url:"http://129.151.116.109:8080/api/Admin/save",
         success:function(respose) {
             console.log("Se guardó correctamente");
             //alert("Se guardó correctametne..");
