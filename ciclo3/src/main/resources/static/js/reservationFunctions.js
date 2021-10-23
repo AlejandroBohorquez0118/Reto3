@@ -143,7 +143,7 @@ function pintarRespuesta(respuesta){
             myTable+="<td>"+"Sin calificacion"+"</td>";
        }
        
-        myTable+="<td><button onclick='eliminar("+respuesta[i].idReservation+")'>Borrar</button></td>";
+        //myTable+="<td><button onclick='eliminar("+respuesta[i].idReservation+")'>Borrar</button></td>";
 
         myTable+="<td><button onclick='Calificar("+respuesta[i].idReservation+")'>Calificar</button></td>";
         myTable+="</tr>";

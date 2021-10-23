@@ -111,12 +111,20 @@ function consultar(){
 
 function pintarRespuesta(respuesta){
     let myTable="<table border='1'>";
+
+    myTable+="<thead>";
+    myTable+="<TR>";
+    myTable+="<th>"+"Nombre"+"</th>";
+    myTable+="<th>"+"Email"+"</th>";
+    myTable+="<th>"+"Contraseña"+"</th>";
+    myTable+="</TR>";
+    myTable+="</thead>";
     for(i=0; i<respuesta.length; i++) {
         myTable+="<tr>";
         myTable+="<td>"+respuesta[i].name+"</td>";
         myTable+="<td>"+respuesta[i].email+"</td>";
         myTable+="<td>"+respuesta[i].password+"</td>";
-        myTable+="<td><button onclick='eliminar("+respuesta[i].idAdmin+")'>Borrar</button></td>";
+        //myTable+="<td><button onclick='eliminar("+respuesta[i].idAdmin+")'>Borrar</button></td>";
         myTable+="<td><button onclick='cargar("+respuesta[i].idAdmin+")'>Cargar</button></td>";
         myTable+="</tr>";
     }
@@ -144,7 +152,7 @@ function guardar(){
             consultar();
         },
         error:function(jqXHR, textStatus, errorTrown){
-            window.location.reload();
+            
             console.log("No se guardó");
             alert("No se guardó correctamente");
         }

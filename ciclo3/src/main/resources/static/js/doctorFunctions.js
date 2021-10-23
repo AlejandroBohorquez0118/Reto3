@@ -111,15 +111,27 @@ function consultar(){
 }
 
 function pintarRespuesta(respuesta){
-    let myTable="<table>";
+   
+    let myTable="<table border=1>";
+
+    myTable+="<thead>";
+    myTable+="<TR>";
+    myTable+="<th>"+"Nombre"+"</th>";
+    myTable+="<th>"+"Departamento"+"</th>";
+    myTable+="<th>"+"Año"+"</th>";
+    myTable+="<th>"+"Descripcion"+"</th>";
+    myTable+="<th>"+"Especialidad"+"</th>";
+    myTable+="</TR>";
+    myTable+="</thead>";
+   
     for(i=0; i<respuesta.length; i++) {
         myTable+="<tr>";
         myTable+="<td>"+respuesta[i].name+"</td>";
         myTable+="<td>"+respuesta[i].department+"</td>";
         myTable+="<td>"+respuesta[i].year+"</td>";
         myTable+="<td>"+respuesta[i].description+"</td>";
-        myTable+="<td>"+respuesta[i].specialty.id+"</td>";
-        myTable+="<td><button onclick='borrar("+respuesta[i].id+")'>Borrar</button></td>";
+        myTable+="<td>"+respuesta[i].specialty.name+"</td>";
+        //myTable+="<td><button onclick='borrar("+respuesta[i].id+")'>Borrar</button></td>";
         myTable+="<td><button onclick='cargar("+respuesta[i].id+")'>Cargar</button></td>";
         myTable+="</tr>";
     }
