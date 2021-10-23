@@ -7,7 +7,9 @@
         <script src="js/messageFunctions.js"></script>
     </head>
         
-    <body onload="consultarDatos()">
+
+    <body onload="consultarDatos()"><center>
+
         <h2>Registro de Mensajes</h2>
 
         <fieldset style="width: 40%">
@@ -36,13 +38,12 @@
 
         <h2>Consultas </h2>
         <hr>
-        <span style="color: blue;"><b>Busqueda por ID</b></span>
-        <input type="text"  id="id2">
+        
         <div id="resultados"></div>
         <button onclick="consultar()">MOSTRAR TODO</button>
-        &nbsp;&nbsp;&nbsp;
-        <button onclick="buscarPorID($('#id2'))">MOSTAR UNO</button>
+        
+        <br>
         <br>
         <a href="index.html">Volver a indice</a>
-    </body>
+    </center></body>
 </html>

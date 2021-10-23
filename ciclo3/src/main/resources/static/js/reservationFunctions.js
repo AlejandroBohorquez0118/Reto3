@@ -139,12 +139,11 @@ function pintarRespuesta(respuesta){
        try{
             myTable+="<td>"+respuesta[i].score.score+"</td>";
        }
-       catch 
-       {
+       catch(error){
             myTable+="<td>"+"Sin calificacion"+"</td>";
        }
        
-        myTable+="<td><button onclick='borrar("+respuesta[i].idReservation+")'>Borrar</button></td>";
+        myTable+="<td><button onclick='eliminar("+respuesta[i].idReservation+")'>Borrar</button></td>";
 
         myTable+="<td><button onclick='Calificar("+respuesta[i].idReservation+")'>Calificar</button></td>";
         myTable+="</tr>";
@@ -218,11 +217,10 @@ function consultarDatos(){
 }
     function comboBoxDoctor(respuesta){
         let myOption="<select name= Doctores id=Doctores>";
-                myOption+="<option value="+0+">"+"Seleccione Doctor"+"</option>"
+                myOption+="<option value="+0+">"+"Seleccione Doctor"+"</option>";
             for(i=0; i<respuesta.length; i++) {
-                myOption+="<option value="+respuesta[i].id+">"+respuesta[i].name+"</option>"
-
-}
+                myOption+="<option value="+respuesta[i].id+">"+respuesta[i].name+"</option>";
+             }
         myOption+="</select>";
         $("#comboDoctor").html(myOption);
         
@@ -251,9 +249,9 @@ function consultarCliente(){
 }
     function comboBoxCliente(respuesta){
         let myOption="<select name=Clientes id=Clientes>";
-                myOption+="<option value="+0+">"+"Seleccione Cliente"+"</option>"
+                myOption+="<option value="+0+">"+"Seleccione Cliente"+"</option>";
             for(i=0; i<respuesta.length; i++) {
-                myOption+="<option value="+respuesta[i].idClient+">"+respuesta[i].name+"</option>"
+                myOption+="<option value="+respuesta[i].idClient+">"+respuesta[i].name+"</option>";
 
 }
         myOption+="</select>";
