@@ -145,6 +145,12 @@ consultar();
 
 function pintarRespuesta(respuesta){
     let myTable="<table border='1'>";
+    myTable+="<thead>";
+    myTable+="<TR>";
+    myTable+="<th>"+"Nombre"+"</th>";
+    myTable+="<th>"+"Descripcion"+"</th>";
+    myTable+="</TR>";
+    myTable+="</thead>";
     for(i=0; i<respuesta.length; i++) {
         myTable+="<tr>";
         myTable+="<td>"+respuesta[i].name+"</td>";
