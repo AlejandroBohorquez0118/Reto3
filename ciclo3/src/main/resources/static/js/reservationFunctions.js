@@ -175,7 +175,7 @@ function guardar(){
             consultar();
         },
         error:function(jqXHR, textStatus, errorTrown){
-            window.location.reload();
+            
             console.log("No se guardó");
             alert("No se guardó correctamente");
         }
